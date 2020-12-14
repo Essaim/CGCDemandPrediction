@@ -1,0 +1,66 @@
+name: Evoconv2
+tag: pre20 randominit gau hidden25 khop3 subidentity randomwalk decay300 lr0.0015 device3
+
+device: 1
+data:
+  dataset: nogrid
+  batch_size: 32
+  X_list: [12,11,10,9,8,7,6,5,4,3,2,1]
+  Y_list: [0,1,2,3,4,5,6,7,8,9,10,11]
+  _len: [672,672]
+  Normal_Method: Standard
+
+preprocess:
+  hidden_size: 20
+  method: big
+
+train:
+  epochs: 200
+  max_grad_norm: 5
+  early_stop_steps: 10
+
+optimizer:
+  name: Adam
+  Adam:
+    lr: 0.0015
+    weight_decay: 0.0005
+    eps: 0.001
+    amsgrad: true
+  RMSprop:
+    lr: 0.01
+    weight_decay: 0.001
+
+loss:
+  name: rmse
+  alfa: 0.001
+
+model:
+  name: Evonet2
+  Evonet2:
+    graph_category: gau
+    normalized_category: randomwalk
+    n_pred: 12
+    hidden_size: 25
+    num_nodes: 266
+    n_dim: 50
+    n_supports: 1
+    k_hop: 3
+    n_rnn_layers: 1
+    n_gconv_layers: 3
+    input_dim: 2
+    output_dim: 2
+    cl_decay_steps: 300
+
+scheduler:
+  name: ReduceLROnPlateau
+  ReduceLROnPlateau:
+    factor: 0.2
+    patience: 5
+    threshold: 0.001
+    min_lr: 0.000001
+  StepLR:
+    step_size: 10
+    gamma: 0.1
+  MultiStepLR:
+    milestones: [1, 5, 10, 15, 20]
+    gamma: 0.1
