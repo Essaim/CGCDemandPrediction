@@ -160,12 +160,6 @@ class EvoNN2(nn.Module):
             initemb2 = torch.mm(torch.diag(p[:n_dim] ** 0.5), n[:, :n_dim].t())
             self.nodevec1 = nn.Parameter(initemb1, requires_grad=True)
             self.nodevec2 = nn.Parameter(initemb2, requires_grad=True)
-            # self.nodevec1 = initemb1.to(device)
-            # self.nodevec2 = initemb2.to(device)
-
-            # self.graph = support.to(device)
-            # self.nodevec1 = nn.Parameter(torch.randn(num_nodes, n_dim), requires_grad=True)
-            # self.nodevec2 = nn.Parameter(torch.randn(n_dim, num_nodes), requires_grad=True)
         else:
             self.method = 'small'
             self.w, self.m = self._delta_cal(support)

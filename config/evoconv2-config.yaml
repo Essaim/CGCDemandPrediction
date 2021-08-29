@@ -1,5 +1,5 @@
 name: Evoconv2
-tag: pre20 randominit gau hidden25 khop3 subidentity randomwalk decay300 lr0.0015 device3
+tag: train1
 
 device: 1
 data:
@@ -37,8 +37,6 @@ loss:
 model:
   name: Evonet2
   Evonet2:
-    graph_category: gau
-    normalized_category: randomwalk
     n_pred: 12
     hidden_size: 25
     num_nodes: 266
