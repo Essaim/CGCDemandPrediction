@@ -5,4 +5,7 @@
     <orderEntry type="jdk" jdkName="Remote Python 3.7.4 (sftp://featurize@ssh.featurize.cn:32805/environment/python/versions/miniconda3-4.7.12/bin/python3)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
+  <component name="PyDocumentationSettings">
+    <option name="renderExternalDocumentation" value="true" />
+  </component>
 </module>
