@@ -9,6 +9,13 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="featurize@ssh.featurize.cn:32805">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/featurize/work/CGC" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="沙河">
         <serverdata>
           <mappings>

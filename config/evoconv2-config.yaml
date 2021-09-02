@@ -1,7 +1,7 @@
 name: Evoconv2
 tag: train1
 
-device: 1
+device: 0
 data:
   dataset: nogrid
   batch_size: 32
@@ -12,7 +12,6 @@ data:
 
 preprocess:
   hidden_size: 20
-  method: big
 
 train:
   epochs: 200

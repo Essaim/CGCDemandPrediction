@@ -9,7 +9,6 @@ from utils import normalization
 
 def preprocessing_for_metric(data_category: list,
                              dataset:str,
-                             method:str,
                              hidden_size:int,
                              Normal_Method: str,
                              _len: list):
@@ -31,12 +30,10 @@ def preprocessing_for_metric(data_category: list,
     u, s, v = np.linalg.svd(inputs)
     w = np.diag(s[:hidden_size]).dot(v[:hidden_size,:]).T
 
-    support = None
-    if method == 'big':
-        graph = cdist(w, w, metric='euclidean')
-        support = graph * -1 / np.std(graph) ** 2
-        support = np.exp(support)
-    elif method == 'small':
-        support = w
-        print(w.shape)
+
+
+    graph = cdist(w, w, metric='euclidean')
+    support = graph * -1 / np.std(graph) ** 2
+    support = np.exp(support)
+
     return support
