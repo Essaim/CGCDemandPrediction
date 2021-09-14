@@ -24,11 +24,9 @@ def loss_calculate(y, y_pred, running_loss, phase,node_num, loss_func):
 
 
 
-def get_loss(name, alfa):
+def get_loss(name):
     if name == 'rmse':
         return RMSELoss()
-    if name =='rmse_lasso':
-        return RMSE_Lasso_loss(alfa)
 
 
 

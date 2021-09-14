@@ -5,13 +5,15 @@ import h5py
 import numpy as np
 from scipy.spatial.distance import cdist
 from utils import normalization
+from utils.graph import random_walk_matrix,normalized_laplacian
 
 
 def preprocessing_for_metric(data_category: list,
                              dataset:str,
                              hidden_size:int,
                              Normal_Method: str,
-                             _len: list):
+                             _len: list,
+                             normalized_category):
     data = []
     normal_method = getattr(normalization, Normal_Method)
     for category in data_category:
@@ -35,5 +37,11 @@ def preprocessing_for_metric(data_category: list,
     graph = cdist(w, w, metric='euclidean')
     support = graph * -1 / np.std(graph) ** 2
     support = np.exp(support)
+
+    support = support - np.identity(support.shape[0])
+    if normalized_category == 'randomwalk':
+        support = random_walk_matrix(support)
+    elif normalized_category == 'laplacian':
+        support = normalized_laplacian(support)
 
     return support

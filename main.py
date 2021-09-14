@@ -76,8 +76,16 @@ def train(conf, data_category):
 
 
 if __name__ == '__main__':
+    # parser = argparse.ArgumentParser()
+    # parser.add_argument('--config', required=True, type=str, default='dsgrn-config',
+    #                     help='Configuration filename for restoring the model.')
+    # parser.add_argument('--con', required=False, type=str2bool, default='False',
+    #                     help='Test.')
+    # parser.add_argument('--stage', required=True, type=str2bool, default='True',
+    #                     help='Stage.')
+    # args = parser.parse_args()
     con = 'evoconv2-config'
-    data = ['taxi']
+    data = ['bike']
     with open(os.path.join('config', f'{con}.yaml')) as f:
         conf = yaml.safe_load(f)
     train(conf, data)
