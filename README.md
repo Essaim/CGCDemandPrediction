@@ -9,10 +9,10 @@ If you find this repository, e.g., the code and the datasets, useful in your res
 
 @inproceedings{ye2021coupled,  
   &nbsp;&nbsp;&nbsp;&nbsp;title={Coupled Layer-wise Graph Convolution for Transportation Demand Prediction},  
-  author={Ye, Junchen and Sun, Leilei and Du, Bowen and Fu, Yanjie and Xiong, Hui},  
-  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},  
-  volume={35},  
-  number={5},  
-  pages={4617--4625},  
-  year={2021}  
+  &nbsp;&nbsp;&nbsp;&nbsp;author={Ye, Junchen and Sun, Leilei and Du, Bowen and Fu, Yanjie and Xiong, Hui},  
+  &nbsp;&nbsp;&nbsp;&nbsp;booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},  
+  &nbsp;&nbsp;&nbsp;&nbsp;volume={35},  
+  &nbsp;&nbsp;&nbsp;&nbsp;number={5},  
+  &nbsp;&nbsp;&nbsp;&nbsp;pages={4617--4625},  
+  &nbsp;&nbsp;&nbsp;&nbsp;year={2021}  
 }
