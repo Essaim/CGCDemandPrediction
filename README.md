@@ -12,15 +12,9 @@ If you find this repository, e.g., the code and the datasets, useful in your res
   title={Coupled Layer-wise Graph Convolution for Transportation Demand Prediction},
   
   author={Ye, Junchen and Sun, Leilei and Du, Bowen and Fu, Yanjie and Xiong, Hui},
-  
   booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-  
   volume={35},
-  
   number={5},
-  
   pages={4617--4625},
-  
   year={2021}
-  
 }
